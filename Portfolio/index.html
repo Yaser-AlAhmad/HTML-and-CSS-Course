@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yaser AlAhmad</title>
+<style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d1b2a;
+  color: white;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1em;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #17c3b2;
+}
+
+/* Hero Section with Video */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+}
+
+.hero-text p {
+  font-size: 1.5em;
+}
+
+/* Centered Image with Filter */
+.center-img {
+  text-align: center;
+  padding: 3em 1em;
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  filter: grayscale(70%) brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+.profile-pic:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Text over Image */
+.image-text-overlay {
+  position: relative;
+  text-align: center;
+}
+
+.image-text-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px 6px #000;
+}
+
+/* Table Styling */
+.table-section {
+  padding: 2em;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 2px solid #333;
+  padding: 12px;
+}
+
+th {
+  background-color: #1a73e8;
+  color: white;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: flex;
+  justify-content: space-around;
+  padding: 3em;
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+.column {
+  width: 40%;
+  height: 200px;
+}
+
+.left {
+  background-color: #dff6ff;
+}
+
+.right {
+  background-color: #f6dfeb;
+}
+
+/* Paragraph Hover Effect */
+.hover-section {
+  text-align: center;
+  padding: 2em;
+}
+
+.hover-para {
+  font-size: 1.2em;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.hover-para:hover {
+  color: #17c3b2;
+  font-weight: bold;
+}
+
+/* Image Overlay Fade */
+.image-fade {
+  padding: 2em;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.overlay-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-container img {
+  width: 300px;
+  transition: opacity 0.5s ease;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.overlay-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background-color: #0d1b2a;
+  color: white;
+  font-weight: bold;
+}
+
+</style>
+
+/head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#grades">Grades</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Video Background + Text Overlay -->
+  <section id="home" class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="https://cdn.pixabay.com/video/2025/08/17/297939_tiny.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-text">
+      <h1>Yaser AlAhmad</h1>
+      <p>Quacking Programmer</p>
+    </div>
+  </section>
+
+  <!-- Centered Image with Filter + Rounded Edges -->
+  <section id="about" class="center-img">
+    <h2>👦 Meet Me </h2>
+    <img src="https://cdn.pixabay.com/photo/2025/08/30/17/27/greylag-goose-9806518_1280.jpg" alt="Yaser AlAhmad" class="profile-pic">
+  </section>
+
+  <!-- Text Over Image -->
+  <section class="image-text-overlay">
+    <img src="https://cdn.pixabay.com/photo/2025/08/30/17/27/greylag-goose-9806518_1280.jpg" alt="Coding Background">
+    <div class="text-overlay">
+      <h2>Future Developer in Progress 🚀</h2>
+    </div>
+  </section>
+
+  <!-- Table with Styled Top Row -->
+  <section id="grades" class="table-section">
+    <h2>📚 School Subjects</h2>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Grade</th>
+      </tr>
+      <tr>
+        <td>Math</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>B+</td>
+      </tr>
+      <tr>
+        <td>Computer</td>
+        <td>A+</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two-Column Layout -->
+  <section class="two-column">
+    <div class="column left">
+      <h3>🧠 Skills</h3>
+      <p>HTML, CSS, Python, Problem Solving</p>
+    </div>
+    <div class="column right">
+      <h3>Hobbies</h3>
+      <p>Quacking</p>
+    </div>
+  </section>
+
+  <!-- Paragraph Hover Effect -->
+  <section class="hover-section">
+    <h2>Hover to See the Effect</h2>
+    <p class="hover-para">This text changes color when you hover over it!</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="image-fade">
+    <div class="overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2025/08/30/12/15/ducklings-9805926_1280.jpg" alt="Ducks">
+      <div class="overlay-text">Quacks</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>&copy; 2025 Yaser AlAhmad</strong> | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
